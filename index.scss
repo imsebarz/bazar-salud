@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f9e3d6;
+  height: 100vh;
+}
+
+.login {
+  border-radius: 50%;
+  background: rgb(124, 1, 1);
+  margin: auto;
+  width: 40vw;
+  height: 40vw;
+  padding: 2em;
+  font-size: 2.5vw;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.5s ease;
+  form {
+    width: 30vw;
+  }
+  input {
+    width: 11vw;
+    height: 3vw;
+  }
+}
+
+.hide {
+  height: 10vw;
+  width: 10vw;
+  margin: 0 auto;
+  position: relative;
+  top: -2em;
+  padding: 0;
+  padding-top: 1em;
+  font-size: 2.5vw;
+  color: white;
+}
+
+.hide:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.tarjeta {
+  height: 30vw;
+  font-size: 2vw;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 0.5px #9c9c9c;
+  display: flex;
+  margin: 3vw;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-basis: 25%;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  img {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+.adicciones .tarjeta {
+  flex-basis: clamp(1em, 40vh, 50%);
+  height: clamp(1em, 40vh, 40vw);
+  perspective: 1000px;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.psicologia .tarjeta {
+  flex-basis: clamp(2em, 60vh, 60%);
+  height: clamp(5em, 40vh, 50%);
+  font-size: clamp(0.8em, 2vw, 4em);
+  padding: 0.5em;
+  margin: 2.5vw;
+}
+
+.rotated {
+  transform: rotateY(180deg);
+}
+
+.adicciones .tarjeta-front,
+.tarjeta-back {
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.tarjeta-back {
+  transform: rotateY(180deg);
+}
+
+.tarjeta:hover {
+  box-shadow: 8px 8px 12px 1px #9c9c9c;
+  cursor: pointer;
+}
+
+.tarjetas-container {
+  display: none;
+  flex-direction: row;
+  width: 100vw;
+  height: 80%;
+  align-items: center;
+  justify-content: center;
+}
+
+.juego-container {
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 80%;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-content {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+  .hide {
+    height: 20vw;
+    width: 20vw;
+    top: -3em;
+    padding-top: 2em;
+    font-size: 3.5vw;
+  }
+
+  .tarjeta.inicio {
+    flex-basis: 40%;
+    height: 50vw;
+  }
+}

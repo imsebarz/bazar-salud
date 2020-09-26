@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #f9e3d6;
+  height: 100vh;
+}
+
+.login {
+  border-radius: 50%;
+  background: #7c0101;
+  margin: auto;
+  width: 40vw;
+  height: 40vw;
+  padding: 2em;
+  font-size: 2.5vw;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.login form {
+  width: 30vw;
+}
+
+.login input {
+  width: 11vw;
+  height: 3vw;
+}
+
+.hide {
+  height: 10vw;
+  width: 10vw;
+  margin: 0 auto;
+  position: relative;
+  top: -2em;
+  padding: 0;
+  padding-top: 1em;
+  font-size: 2.5vw;
+  color: white;
+}
+
+.hide:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
+}
+
+.tarjeta {
+  height: 30vw;
+  font-size: 2vw;
+  background: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 10px 0.5px #9c9c9c;
+          box-shadow: 5px 5px 10px 0.5px #9c9c9c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 3vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.tarjeta img {
+  width: 50%;
+  height: 50%;
+}
+
+.adicciones .tarjeta {
+  -ms-flex-preferred-size: clamp(1em, 40vh, 50%);
+      flex-basis: clamp(1em, 40vh, 50%);
+  height: clamp(1em, 40vh, 40vw);
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.psicologia .tarjeta {
+  -ms-flex-preferred-size: clamp(2em, 60vh, 60%);
+      flex-basis: clamp(2em, 60vh, 60%);
+  height: clamp(5em, 40vh, 50%);
+  font-size: clamp(0.8em, 2vw, 4em);
+  padding: 0.5em;
+  margin: 2.5vw;
+}
+
+.rotated {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.adicciones .tarjeta-front,
+.tarjeta-back {
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+.tarjeta-back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.tarjeta:hover {
+  -webkit-box-shadow: 8px 8px 12px 1px #9c9c9c;
+          box-shadow: 8px 8px 12px 1px #9c9c9c;
+  cursor: pointer;
+}
+
+.tarjetas-container {
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100vw;
+  height: 80%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.juego-container {
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100vw;
+  height: 80%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-content {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+  .hide {
+    height: 20vw;
+    width: 20vw;
+    top: -3em;
+    padding-top: 2em;
+    font-size: 3.5vw;
+  }
+  .tarjeta.inicio {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    height: 50vw;
+  }
+}
+/*# sourceMappingURL=index.css.map */
