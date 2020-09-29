@@ -118,8 +118,8 @@ body {
     transform-style: preserve-3d;
     border-radius: 35px;
     img {
-      width: 105%;
-      height: 105%;
+      width: 106%;
+      height: 106%;
       border: 2px solid black;
       border-radius: 35px;
       margin: auto;
@@ -243,12 +243,16 @@ s #score {
     width: 65vw;
     height: 65vw;
     button {
-      width: 5em;
+      width: 80%;
       height: 2em;
     }
-    input {
-      width: 30%;
-      height: 5vw;
+
+    form {
+      width: 100%;
+      input {
+        width: 45%;
+        height: 5vw;
+      }
     }
   }
   .hide {
@@ -264,8 +268,20 @@ s #score {
     height: 50vw;
   }
 
+  .tarjetas-container {
+    height: 60%;
+    .tarjeta {
+      margin: 0 auto;
+      img {
+        height: 120%;
+        width: 150%;
+      }
+    }
+  }
+
   .emociones .tarjeta {
     width: 90vw;
     height: 40%;
+    margin: auto;
   }
 }

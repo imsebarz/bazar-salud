@@ -156,8 +156,8 @@ body {
 
 .odontologia .tarjeta img,
 .adicciones .tarjeta img {
-  width: 105%;
-  height: 105%;
+  width: 106%;
+  height: 106%;
   border: 2px solid black;
   border-radius: 35px;
   margin: auto;
@@ -313,11 +313,14 @@ s #score {
     height: 65vw;
   }
   .login button {
-    width: 5em;
+    width: 80%;
     height: 2em;
   }
-  .login input {
-    width: 30%;
+  .login form {
+    width: 100%;
+  }
+  .login form input {
+    width: 45%;
     height: 5vw;
   }
   .hide {
@@ -332,9 +335,20 @@ s #score {
         flex-basis: 40%;
     height: 50vw;
   }
+  .tarjetas-container {
+    height: 60%;
+  }
+  .tarjetas-container .tarjeta {
+    margin: 0 auto;
+  }
+  .tarjetas-container .tarjeta img {
+    height: 120%;
+    width: 150%;
+  }
   .emociones .tarjeta {
     width: 90vw;
     height: 40%;
+    margin: auto;
   }
 }
 /*# sourceMappingURL=index.css.map */
