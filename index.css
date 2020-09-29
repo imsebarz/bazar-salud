@@ -6,19 +6,21 @@
 }
 
 body {
-  background: #f9e3d6;
+  background: #7c0101;
   height: 100vh;
 }
 
 .login {
   border-radius: 50%;
-  background: #7c0101;
+  background: #f5eedc;
+  font-family: sans-serif;
+  border: 3px solid black;
   margin: auto;
-  width: 40vw;
-  height: 40vw;
-  padding: 2em;
-  font-size: 2.5vw;
-  color: white;
+  width: 45vw;
+  height: 45vw;
+  padding: 1.8em;
+  font-size: 2.1vw;
+  color: #7c0101;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,13 +39,52 @@ body {
   transition: all 0.5s ease;
 }
 
+.login h1 {
+  margin: 0.5em 0.5em;
+  font-weight: 900;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  text-transform: uppercase;
+}
+
+.login p {
+  margin: 0.5em 0 1em 0;
+  text-transform: uppercase;
+  font-size: 1.5vw;
+}
+
+.login button {
+  height: 3em;
+  width: 6em;
+  margin: 1em;
+  background: #7c0101;
+  color: white;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid black;
+}
+
+.login button:hover {
+  background: white;
+  color: #7c0101;
+  border: #7c0101 2px solid;
+}
+
 .login form {
-  width: 30vw;
+  width: 33vw;
 }
 
 .login input {
-  width: 11vw;
+  width: 10vw;
   height: 3vw;
+  border: 2px solid black;
+  padding-left: 1em;
+}
+
+.login svg {
+  display: none;
+  height: 3em;
+  width: 3em;
 }
 
 .hide {
@@ -51,11 +92,12 @@ body {
   width: 10vw;
   margin: 0 auto;
   position: relative;
+  background: #7c0101;
   top: -2em;
   padding: 0;
-  padding-top: 1em;
+  padding-top: 1.5em;
   font-size: 2.5vw;
-  color: white;
+  color: #f5eedc;
 }
 
 .hide:hover {
@@ -65,8 +107,9 @@ body {
 }
 
 .tarjeta {
-  height: 30vw;
+  height: clamp(1em, 45vh, 35vw);
   font-size: 2vw;
+  border: 2px solid black;
   background: white;
   border-radius: 10px;
   -webkit-box-shadow: 5px 5px 10px 0.5px #9c9c9c;
@@ -82,8 +125,8 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  -ms-flex-preferred-size: 25%;
-      flex-basis: 25%;
+  -ms-flex-preferred-size: clamp(1em, 40vh, 30%);
+      flex-basis: clamp(1em, 40vh, 30%);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -93,28 +136,90 @@ body {
 }
 
 .tarjeta img {
-  width: 50%;
-  height: 50%;
+  width: 120%;
+  height: 100%;
+  margin: -35px;
 }
 
+.odontologia .tarjeta,
 .adicciones .tarjeta {
-  -ms-flex-preferred-size: clamp(1em, 40vh, 50%);
-      flex-basis: clamp(1em, 40vh, 50%);
-  height: clamp(1em, 40vh, 40vw);
+  -ms-flex-preferred-size: clamp(1em, 65vh, 50%);
+      flex-basis: clamp(1em, 65vh, 50%);
+  height: clamp(1em, 40vh, 28vw);
   -webkit-perspective: 1000px;
           perspective: 1000px;
-  position: relative;
+  border: none;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
+  border-radius: 35px;
 }
 
-.psicologia .tarjeta {
-  -ms-flex-preferred-size: clamp(2em, 60vh, 60%);
-      flex-basis: clamp(2em, 60vh, 60%);
-  height: clamp(5em, 40vh, 50%);
-  font-size: clamp(0.8em, 2vw, 4em);
-  padding: 0.5em;
-  margin: 2.5vw;
+.odontologia .tarjeta img,
+.adicciones .tarjeta img {
+  width: 105%;
+  height: 105%;
+  border: 2px solid black;
+  border-radius: 35px;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+s #score {
+  display: none;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#calificar {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 3em;
+  z-index: 5;
+  position: relative;
+  border-radius: 10px;
+  background: #7c0101;
+  color: white;
+  margin: 5% 45%;
+}
+
+.musica img {
+  width: 100%;
+}
+
+.musica {
+  display: none;
+}
+
+.emociones svg {
+  display: block;
+  height: 100%;
+}
+
+.emociones svg path:hover {
+  cursor: pointer;
+}
+
+.emociones .tarjeta {
+  z-index: 20;
+  margin: 5vh;
+  border-radius: 30px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: none;
+  height: 60%;
+  width: 55vw;
+}
+
+.emociones .tarjeta img {
+  border-radius: 30px;
+  height: 100%;
+  width: 100%;
+  margin: 0;
 }
 
 .rotated {
@@ -123,7 +228,9 @@ body {
 }
 
 .adicciones .tarjeta-front,
-.tarjeta-back {
+.adicciones .tarjeta-back,
+.odontologia .tarjeta-front,
+.odontologia .tarjeta-back {
   -webkit-backface-visibility: hidden;
   /* Safari */
   backface-visibility: hidden;
@@ -132,11 +239,20 @@ body {
 .tarjeta-back {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.tarjeta-dentro {
+  height: 100%;
+  width: 100%;
 }
 
 .tarjeta:hover {
-  -webkit-box-shadow: 8px 8px 12px 1px #9c9c9c;
-          box-shadow: 8px 8px 12px 1px #9c9c9c;
+  -webkit-box-shadow: 9px 9px 14px 1px #9c9c9c;
+          box-shadow: 9px 9px 14px 1px #9c9c9c;
   cursor: pointer;
 }
 
@@ -146,8 +262,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 100vw;
   height: 80%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -191,6 +308,18 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
+  .login {
+    width: 65vw;
+    height: 65vw;
+  }
+  .login button {
+    width: 5em;
+    height: 2em;
+  }
+  .login input {
+    width: 30%;
+    height: 5vw;
+  }
   .hide {
     height: 20vw;
     width: 20vw;
@@ -202,6 +331,10 @@ body {
     -ms-flex-preferred-size: 40%;
         flex-basis: 40%;
     height: 50vw;
+  }
+  .emociones .tarjeta {
+    width: 90vw;
+    height: 40%;
   }
 }
 /*# sourceMappingURL=index.css.map */
