@@ -2,6 +2,12 @@ const loginCircle = document.querySelector(".login");
 const html = document.querySelector("html");
 const body = document.querySelector("body");
 const mainContent = document.querySelector(".main-content");
+const iframes = document.querySelectorAll("iframe");
+const srcs = {
+  deportes: `${iframes[2].src}`,
+  seno: `${iframes[1].src}`,
+  origami: `${iframes[0].src}`,
+};
 const tarjetasContainer = document.querySelector(".tarjetas-container");
 const adiccionesContainer = document.querySelector(
   ".juego-container.adicciones"
@@ -10,7 +16,15 @@ const odontologiaContainer = document.querySelector(
   ".juego-container.odontologia"
 );
 const musicaContainer = document.querySelector(".juego-container.musica");
+const deportesContainer = document.querySelector(".juego-container.deportes");
+const socialContainer = document.querySelector(".juego-container.social");
+const autoexamenContainer = document.querySelector(
+  ".juego-container.autoexamen"
+);
 const emocionesContainer = document.querySelector(".juego-container.emociones");
+const diversidadContainer = document.querySelector(
+  ".juego-container.diversidad"
+);
 const tarjetasInicio = document.querySelectorAll(".tarjeta.inicio");
 const tarjetasAdicciones = document.querySelectorAll(
   ".juego-container.adicciones .tarjeta"
@@ -49,6 +63,16 @@ form.addEventListener("submit", (e) => {
     );
 });
 
+let mySwiper = new Swiper(".swiper-container", {
+  observer: true,
+  observeParents: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+    color: "red",
+  },
+});
+
 const cerrarLogin = () => {
   loginCircle.classList.add("hide");
   loginCircle.innerHTML = `<i class="fas fa-home"></i>`;
@@ -69,9 +93,19 @@ const cerrarTodo = () => {
   adiccionesContainer.style.display = "none";
   musicaContainer.style.display = "none";
   emocionesContainer.style.display = "none";
+  diversidadContainer.style.display = "none";
+  socialContainer.style.display = "none";
+  autoexamenContainer.style.display = "none";
+  deportesContainer.style.display = "none";
+  cerrarIframes();
+};
+
+const cerrarIframes = () => {
+  iframes.forEach((iframe) => (iframe.src = `${iframe.src}`));
 };
 
 const mostrar = (juego) => {
+  body.scrollIntoView(top);
   juego.style.display = "flex";
 };
 
@@ -79,15 +113,24 @@ const mostrarJuego = (e) => {
   let juego = e.target.parentElement.dataset.id;
   cerrarTodo();
   if (juego === "adicciones") {
+    body.style.background = "white";
     mostrar(adiccionesContainer);
-    body.style.background = "white";
   } else if (juego === "odontologia") {
-    mostrar(odontologiaContainer);
     body.style.background = "white";
+    mostrar(odontologiaContainer);
   } else if (juego === "musica") {
     mostrar(musicaContainer);
   } else if (juego === "emociones") {
     mostrar(emocionesContainer);
+  } else if (juego === "diversidad") {
+    body.style.background = "white";
+    mostrar(diversidadContainer);
+  } else if (juego === "social") {
+    mostrar(socialContainer);
+  } else if (juego === "autoexamen") {
+    mostrar(autoexamenContainer);
+  } else if (juego === "deportes") {
+    mostrar(deportesContainer);
   }
 };
 
@@ -117,7 +160,7 @@ coloresEmocionometro.forEach((color) => {
 const mostrarColor = (color) => {
   tarjetaEmocionometro.innerHTML = `<img src="./images/emociones/${color}.png" alt="emocion ${color}" />`;
   tarjetaEmocionometro.style.display = "block";
-  body.style.background = "rgb(156 149 132)";
+  body.style.background = "rgb(156,149,132)";
   mainContent.addEventListener("click", (e) => {
     if (!e.target.classList.contains("color")) {
       cerrarColor();

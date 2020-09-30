@@ -10,6 +10,14 @@ body {
   height: 100vh;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #690000;
+}
+
 .login {
   border-radius: 50%;
   background: #f5eedc;
@@ -18,8 +26,8 @@ body {
   margin: auto;
   width: 45vw;
   height: 45vw;
-  padding: 1.8em;
-  font-size: 2.1vw;
+  padding: 1.7em;
+  font-size: 2.2vw;
   color: #7c0101;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -186,12 +194,37 @@ s #score {
   margin: 5% 45%;
 }
 
+.musica {
+  display: none;
+}
+
 .musica img {
   width: 100%;
 }
 
-.musica {
+.musica iframe {
+  margin: 2em;
+}
+
+iframe {
+  border-radius: 35px;
+  border: 2px solid black;
+}
+
+.deportes {
   display: none;
+}
+
+.deportes iframe {
+  margin: 2em;
+}
+
+.social {
+  display: none;
+}
+
+.social img {
+  width: 100%;
 }
 
 .emociones svg {
@@ -211,8 +244,8 @@ s #score {
   width: 100%;
   position: absolute;
   display: none;
-  height: 60%;
-  width: 55vw;
+  height: 63%;
+  width: 54vw;
 }
 
 .emociones .tarjeta img {
@@ -307,13 +340,50 @@ s #score {
           flex-direction: column;
 }
 
+.swiper-container {
+  width: 50%;
+  height: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #7c0101;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  border-radius: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.swiper-slide img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
 @media only screen and (max-width: 600px) {
   .login {
     width: 65vw;
     height: 65vw;
+    font-size: 2.8vw;
+  }
+  .login p {
+    font-size: 2.8vw;
   }
   .login button {
-    width: 80%;
+    width: 60%;
     height: 2em;
   }
   .login form {
@@ -330,16 +400,14 @@ s #score {
     padding-top: 2em;
     font-size: 3.5vw;
   }
-  .tarjeta.inicio {
-    -ms-flex-preferred-size: 40%;
-        flex-basis: 40%;
-    height: 50vw;
-  }
   .tarjetas-container {
     height: 60%;
   }
   .tarjetas-container .tarjeta {
-    margin: 0 auto;
+    margin: 1em auto;
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    height: 50vw;
   }
   .tarjetas-container .tarjeta img {
     height: 120%;
@@ -349,6 +417,14 @@ s #score {
     width: 90vw;
     height: 40%;
     margin: auto;
+  }
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  iframe {
+    width: 80vw;
+    height: 40%;
   }
 }
 /*# sourceMappingURL=index.css.map */

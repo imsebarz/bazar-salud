@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./index.css" />
     <link
       rel="stylesheet"
@@ -410,11 +414,23 @@
         <div class="tarjeta inicio" data-id="emociones">
           <img src="./images/Carpas/psicologia_02.png" alt="" />
         </div>
+        <div class="tarjeta inicio" data-id="autoexamen">
+          <img src="./images/Carpas/autoexamen_01.png" alt="" />
+        </div>
         <div class="tarjeta inicio" data-id="adicciones">
           <img src="./images/Carpas/adicciones_01.png" alt="" />
         </div>
+        <div class="tarjeta inicio" data-id="social">
+          <img src="./images/Carpas/trabajosocial_01.png" alt="" />
+        </div>
+        <div class="tarjeta inicio" data-id="diversidad">
+          <img src="./images/Carpas/psicologia_01.png" alt="" />
+        </div>
         <div class="tarjeta inicio" data-id="musica">
           <img src="./images/Carpas/musica_01.png" alt="" />
+        </div>
+        <div class="tarjeta inicio" data-id="deportes">
+          <img src="./images/Carpas/deportes_01.png" alt="" />
         </div>
       </div>
 
@@ -624,6 +640,14 @@
       </div>
       <div class="juego-container musica">
         <img src="./images/MUSICA_Mesa de trabajo 1.png" alt="" />
+        <iframe
+          width="840"
+          height="472.5"
+          src="https://www.youtube.com/embed/VcZcBqWw2M4"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
       <div class="juego-container emociones">
         <svg
@@ -1100,8 +1124,49 @@
           <img src="./images/adicciones/adicciones-02.png" alt="" />
         </div>
       </div>
+      <div class="juego-container diversidad">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./images/diversidad/diversa-01.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/diversidad/diversa-02.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/diversidad/diversa-03.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/diversidad/diversa-04.png" alt="" />
+            </div>
+          </div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+      <div class="juego-container social">
+        <img src="./images/ahorro_Mesa de trabajo 1.png" alt="" />
+      </div>
+      <div class="juego-container autoexamen">
+        <iframe
+          src="https://drive.google.com/file/d/1lBs555AhXcS3tKN9oVUTyFgHYLGOdzEw/preview"
+          width="720"
+          height="480"
+        ></iframe>
+      </div>
+      <div class="juego-container deportes">
+        <iframe
+          id="player"
+          src="https://drive.google.com/file/d/1ncQ3pwE2G1SK7Fo1KVgtajQcDf-aeADA/preview"
+          width="720"
+          height="480"
+        ></iframe>
+      </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>
