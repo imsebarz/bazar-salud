@@ -3,11 +3,22 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 body {
   background: #7c0101;
   height: 100vh;
+}
+
+.title {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2.2vw;
 }
 
 ::-webkit-scrollbar {
@@ -229,6 +240,7 @@ iframe {
 
 .emociones svg {
   display: block;
+  margin-top: 2em;
   height: 100%;
 }
 
