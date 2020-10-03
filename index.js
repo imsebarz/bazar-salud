@@ -22,7 +22,13 @@ const autoexamenContainer = document.querySelector(
   ".juego-container.autoexamen"
 );
 const emocionesContainer = document.querySelector(".juego-container.emociones");
+const bucaramangaContainer = document.querySelector(
+  ".juego-container.sede-bucaramanga"
+);
 const donacionContainer = document.querySelector(".juego-container.donacion");
+const palmiraContainer = document.querySelector(
+  ".juego-container.sede-palmira"
+);
 const diversidadContainer = document.querySelector(
   ".juego-container.diversidad"
 );
@@ -50,7 +56,6 @@ form.addEventListener("submit", (e) => {
   loadingLogin.style.display = "flex";
   fetch(scriptURL, { method: "POST", body: new FormData(form) })
     .then((response) => {
-      console.log("Success!", response);
       swal
         .fire(
           `Hola ${nombre.value}`,
@@ -64,9 +69,21 @@ form.addEventListener("submit", (e) => {
     );
 });
 
-let mySwiper = new Swiper(".swiper-container", {
+let mySwiper1 = new Swiper(".swiper-container.s1", {
   observer: true,
   observeParents: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+    color: "red",
+  },
+});
+
+let mySwiper2 = new Swiper(".swiper-container.s2", {
+  observer: true,
+  observeParents: true,
+  calculateHeight: true,
+  autoHeight: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -85,7 +102,6 @@ const mostrarInicio = () => {
   cerrarTodo();
   mostrar(tarjetasContainer);
   body.style.background = "rgb(245,238, 220)";
-  console.log("nosfii pal inicio");
 };
 
 const cerrarTodo = () => {
@@ -99,6 +115,8 @@ const cerrarTodo = () => {
   autoexamenContainer.style.display = "none";
   deportesContainer.style.display = "none";
   donacionContainer.style.display = "none";
+  bucaramangaContainer.style.display = "none";
+  palmiraContainer.style.display = "none";
   cerrarIframes();
 };
 
@@ -135,6 +153,10 @@ const mostrarJuego = (e) => {
     mostrar(deportesContainer);
   } else if (juego === "donacion") {
     mostrar(donacionContainer);
+  } else if (juego === "sede-bucaramanga") {
+    mostrar(bucaramangaContainer);
+  } else if (juego === "sede-palmira") {
+    mostrar(palmiraContainer);
   }
 };
 
