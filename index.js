@@ -22,6 +22,7 @@ const autoexamenContainer = document.querySelector(
   ".juego-container.autoexamen"
 );
 const emocionesContainer = document.querySelector(".juego-container.emociones");
+const donacionContainer = document.querySelector(".juego-container.donacion");
 const diversidadContainer = document.querySelector(
   ".juego-container.diversidad"
 );
@@ -97,6 +98,7 @@ const cerrarTodo = () => {
   socialContainer.style.display = "none";
   autoexamenContainer.style.display = "none";
   deportesContainer.style.display = "none";
+  donacionContainer.style.display = "none";
   cerrarIframes();
 };
 
@@ -131,6 +133,8 @@ const mostrarJuego = (e) => {
     mostrar(autoexamenContainer);
   } else if (juego === "deportes") {
     mostrar(deportesContainer);
+  } else if (juego === "donacion") {
+    mostrar(donacionContainer);
   }
 };
 

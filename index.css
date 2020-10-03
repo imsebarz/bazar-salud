@@ -162,9 +162,9 @@ body {
 
 .odontologia .tarjeta,
 .adicciones .tarjeta {
-  -ms-flex-preferred-size: clamp(1em, 65vh, 50%);
-      flex-basis: clamp(1em, 65vh, 50%);
-  height: clamp(1em, 40vh, 28vw);
+  -ms-flex-preferred-size: clamp(1em, 65vh, 65%);
+      flex-basis: clamp(1em, 65vh, 65%);
+  height: clamp(1em, 40vh, 40vw);
   -webkit-perspective: 1000px;
           perspective: 1000px;
   border: none;
@@ -213,21 +213,30 @@ s #score {
   width: 100%;
 }
 
-.musica iframe {
-  margin: 2em;
-}
-
 iframe {
   border-radius: 35px;
   border: 2px solid black;
+  margin: 2em;
 }
 
 .deportes {
   display: none;
 }
 
-.deportes iframe {
-  margin: 2em;
+.donacion p {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin: 1em;
+  font-size: 1.5vw;
+  font-style: italic;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.donacion p a {
+  color: #2b3eb3;
 }
 
 .social {
@@ -432,11 +441,18 @@ iframe {
   }
   .swiper-container {
     width: 100%;
-    height: 100%;
+    height: 90%;
   }
   iframe {
     width: 80vw;
     height: 40%;
+    background: black;
+  }
+  .title {
+    font-size: 5.2vw;
+  }
+  p {
+    font-size: 3.2vw !important;
   }
 }
 /*# sourceMappingURL=index.css.map */
