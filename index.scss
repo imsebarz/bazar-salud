@@ -2,11 +2,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
+
 }
 
 body {
   background: rgb(124, 1, 1);
   height: 100vh;
+}
+
+.title{
+  flex-basis: 100%;
+  text-align: center;
+  justify-content: center;
+  font-size: 2.2vw;
 }
 
 ::-webkit-scrollbar {
@@ -185,6 +194,7 @@ iframe {
 .emociones {
   svg {
     display: block;
+    margin-top: 2em;
     height: 100%;
     path:hover {
       cursor: pointer;
